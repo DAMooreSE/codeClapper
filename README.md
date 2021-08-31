@@ -3,6 +3,7 @@
 Welcome to Dakota Moore's private github repository for the commissioned Code Clapper project. 
 
 THIS PROJECT IS BASED ON AN ORIGINAL IDEA BY HENDRIK SWANEPOEL AND HE PROVIDED HIS SOURCE CODE FOR DEVELOPMENT ON THIS PROJECT
+
 HIS GITHUB CAN BE FOUND HERE: https://github.com/hendrikswan
 
 This software has 2 main functions:
