@@ -4,10 +4,6 @@
     "install-clapper": "cd clapper && yarn install --frozen-lockfile"
   },
   "dependencies": {
-    "get-video-duration": "^3.0.2",
-    "react": "^17.0.2",
-    "react-app-rewired": "^2.1.8",
-    "react-scripts": "^4.0.3",
-    "yarn": "^1.22.17"
+    "get-video-duration": "^3.0.2"
   }
 }
