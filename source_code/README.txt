@@ -32,9 +32,9 @@ Make sure you have the following softwares installed before proceeding:
 
 //Now start the recording services
 14.Run 'npm run start'
-//The full application should now be running and functional
 
-9. Open 'localhost:3006' in a new PRIVATE window in a browser and try to login with your new login.
+//The full application should now be running and functional
+15. Open 'localhost:3006' in a new PRIVATE window in a browser and try to login with your new login.
 //Some browsers will cache the old login so a private window ensure this doesn't happen
 
 
