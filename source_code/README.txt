@@ -4,32 +4,38 @@ Make sure you have the following softwares installed before proceeding:
 
 
 //Installing Dependencies
-1.Download and Open the project folder 'code-clapper-source-reconfigured' in Visual Studio Code
+1.Download and Open the project folder '/source_code/codeClapper' in Visual Studio Code
 
 //Before I could install additional npm packages I had to take ownership of its files:
-2.Open a terminal run 'sudo chown -R $(whoami) $(npm config get prefix)/{lib,node_modules,bin,share}'
+//1.5. Open a terminal run 'sudo chown -R $(whoami) $(npm config get prefix)/{lib,node_modules,bin,share}'
 //Now we install the necessary packages to run the application:
-3.Run 'npm install -g yarn'
-4.Change directory to /clapper and enter 'npm install --save --legacy-peer-deps'
-5.Change directory to ../recorder and enter 'npm install'
+2.Run 'npm install -g yarn'
+3.Run 'cd clapper'
+4.Run 'npm install --save --legacy-peer-deps'
+5.Run 'cd ../recorder'
+6.Run 'npm install'
 
-//Now we build the clapper
-6.Change directory to the project home folder and enter the commands: (each one might take some time to finish)
-	'npm run build-clapper'
-	then 'npm run install-clapper'
-	
-//Now we start the services for the UI (this should open the UI in a browser)
-7.Change directory to /clapper and enter 'yarn start'
+//Now we build and launch the clapper
+7.Run 'cd ..'
+8.Run 'npm run build-clapper'
+9.Run 'npm run install-clapper'
+10.Run 'cd clapper'
+11.Run 'npm run start'
 //This should open a browser to the local webpage 'localhost:3006' where the application is deployed to
 //This page can be accessed by devices on the same network by opening 'your_ip_address:3006' in a browser
 
+//Now register your user (Only done once)
+12.Open a terminal at '/source_code/codeClapper/recorder'
+13.Run 'node index.js signup --email YOUREMAIL --password YOURPASSWORD'
+//switch out YOUREMAIL and YOURPASSWORD with what you want your login info to be
+//Wait a couple seconds for it to run, but you'll most likely need to hit 'ctrl+c' to cancel out of the function
+
 //Now start the recording services
-8.Open another terminal in the /recorder directory and enter 'npm run start'
+14.Run 'npm run start'
 //The full application should now be running and functional
 
-9. If you're successfully able to launch the application, or at least UI, try to login with the dummy profile i've already created:
-	login: dakotamoorese@gmail.com
-	password: grandma123
+9. Open 'localhost:3006' in a new PRIVATE window in a browser and try to login with your new login.
+//Some browsers will cache the old login so a private window ensure this doesn't happen
 
 
 POTENTIAL PROBLEMS AND FIXES
