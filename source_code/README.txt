@@ -21,20 +21,21 @@ Make sure you have the following softwares installed before proceeding:
 9.Run 'npm run install-clapper'
 10.Run 'cd clapper'
 11.Run 'npm run start'
+12.Run 'yarn start'
 //This should open a browser to the local webpage 'localhost:3006' where the application is deployed to
 //This page can be accessed by devices on the same network by opening 'your_ip_address:3006' in a browser
 
 //Now register your user (Only done once)
-12.Open a terminal at '/source_code/codeClapper/recorder'
-13.Run 'node index.js signup --email YOUREMAIL --password YOURPASSWORD'
+13.Open a terminal at '/source_code/codeClapper/recorder'
+14.Run 'node index.js signup --email YOUREMAIL --password YOURPASSWORD'
 //switch out YOUREMAIL and YOURPASSWORD with what you want your login info to be
 //Wait a couple seconds for it to run, but you'll most likely need to hit 'ctrl+c' to cancel out of the function
 
 //Now start the recording services
-14.Run 'npm run start'
+15.Run 'npm run start'
 
 //The full application should now be running and functional
-15. Open 'localhost:3006' in a new PRIVATE window in a browser and try to login with your new login.
+16. Open 'localhost:3006' in a new PRIVATE window in a browser and try to login with your new login.
 //Some browsers will cache the old login so a private window ensure this doesn't happen
 
 
