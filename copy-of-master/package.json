@@ -1,0 +1,19 @@
+{
+  "scripts": {  
+    "install-cdep": "cd clapper && npm install --save --legacy-peer-deps",
+	"install-rdep": "cd recorder && npm install",
+	"install-dep": "npm run install-cdep && npm run install-rdep",
+    "build-clapper": "cd clapper && yarn build",
+	"build-recorder": "cd recorder && npm run build",
+	"build": "npm run build-clapper && npm run build-recorder",
+    "install-clapper": "cd clapper && yarn install --frozen-lockfile",
+	"start-clapper": "cd clapper && npm run start",
+	"install-start": "npm run install-clapper && npm run start-clapper",
+	"start-recorder": "cd recorder && npm run start",
+	"start": "npm run install-start && npm run start-recorder",
+	"deploy": "npm run build && npm run start"
+  },
+  "dependencies": {
+    "get-video-duration": "^3.0.2"
+  }
+}

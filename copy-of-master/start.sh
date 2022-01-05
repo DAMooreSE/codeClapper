@@ -1,0 +1,1 @@
+cd clapper && yarn start; cd recorder && yarn start

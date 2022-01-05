@@ -1,0 +1,33 @@
+{
+  "bin": "./index.js",
+  "name": "clapper",
+  "scripts": {
+    "start": "node index start && yarn start",
+    "package": "pkg package.json --out-path dist"
+  },
+  "dependencies": {
+    "aperture": "^5.2.0",
+    "app-root-path": "^3.0.0",
+    "archiver": "^5.0.0",
+    "ffmpeg-static": "^4.2.6",
+    "firebase": "^7.16.0",
+    "lodash": "^4.17.19",
+    "moment": "^2.27.0",
+    "node-notifier": "^7.0.1",
+    "pad-left": "^2.1.0",
+    "pkg": "^4.4.9",
+    "rimraf": "^3.0.2",
+    "xhr2": "^0.2.0",
+    "yargs": "^15.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^2.0.5"
+  }
+}
