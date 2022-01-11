@@ -26,9 +26,9 @@ module.exports = async function startCommand() {
   const uid = await loginWithCredential()
   let recorder
 
-  // const screens = await aperture.screens()
-  // const mics = await aperture.audioDevices()
-  // console.log({ screens, mics })
+  const screens = await aperture.screens()
+  const mics = await aperture.audioDevices()
+  console.log({ screens, mics })
 
   const db = firebase.firestore()
   const userRef = db.collection("users").doc(uid)

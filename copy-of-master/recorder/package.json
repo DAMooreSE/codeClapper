@@ -2,8 +2,9 @@
   "bin": "./index.js",
   "name": "clapper",
   "scripts": {
-    "start": "node index start && yarn start",
-    "package": "pkg package.json --out-path dist"
+    "start": "node index start",
+    "package": "pkg package.json --out-path dist",
+    "enroll": "node index.js signup"
   },
   "dependencies": {
     "aperture": "^5.2.0",

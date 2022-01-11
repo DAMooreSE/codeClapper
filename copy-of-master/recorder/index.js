@@ -15,15 +15,13 @@ require("firebase/storage")
 
 // TODO: Replace the following with your app's Firebase project configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyAG3XPMSeY2cbm1o10lqvrwotuHOF7oGmo",
-  authDomain: "ppc-recorder.firebaseapp.com",
-  databaseURL: "https://ppc-recorder.firebaseio.com",
-  projectId: "ppc-recorder",
-  storageBucket: "ppc-recorder.appspot.com",
-  messagingSenderId: "449196439956",
-  appId: "1:449196439956:web:5048e1d9494a7a32217781",
-  measurementId: "G-Q5L4ZM9QTN",
-}
+  apiKey: "AIzaSyBoSQoPY5lSN6lp8-bj4mLVIVcxT_wvI4k",
+  authDomain: "codeclapper-d8a72.firebaseapp.com",
+  projectId: "codeclapper-d8a72",
+  storageBucket: "codeclapper-d8a72.appspot.com",
+  messagingSenderId: "992550955729",
+  appId: "1:992550955729:web:268c66ceb8160fde26b3f0"
+};
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
