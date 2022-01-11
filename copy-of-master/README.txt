@@ -15,7 +15,7 @@ Make sure you have the following softwares installed before proceeding:
 //This page can be accessed by devices on the same network by opening 'your_ip_address:3006' in a browser
 
 //Now register your user
-5.Open a terminal at '/copy-of-master/recorder'
+5.Leave the other terminal open and running and open a new terminal at '/copy-of-master/recorder'
 6.Run 'node run enroll -- --email YOUREMAIL --password YOURPASSWORD'
 7.Run "cd .." 
 8.Run 'npm run build-recorder' which should start the recording service
