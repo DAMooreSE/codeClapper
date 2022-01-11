@@ -8,14 +8,14 @@ Make sure you have the following softwares installed before proceeding:
 
 
 //Now we install the necessary packages to run the application:
-2.Run 'npm install -g yarn'
+2.Run 'npm install -g yarn' (only done if yarn hasn't been installed on your machine before)
 3.Run 'npm run install' and wait for the dependencies to install
 4.Run 'npm run build-clapper' which should start and run the UI service
 //This should open a browser to the local webpage 'localhost:3006' where the application is deployed to
 //This page can be accessed by devices on the same network by opening 'your_ip_address:3006' in a browser
 
 //Now register your user
-5.Open a terminal at '/source_code/codeClapper/recorder'
+5.Open a terminal at '/copy-of-master/recorder'
 6.Run 'node run enroll -- --email YOUREMAIL --password YOURPASSWORD'
 7.Run "cd .." 
 8.Run 'npm run build-recorder' which should start the recording service
