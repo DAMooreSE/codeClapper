@@ -15,12 +15,13 @@ require("firebase/storage")
 
 // TODO: Replace the following with your app's Firebase project configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyBoSQoPY5lSN6lp8-bj4mLVIVcxT_wvI4k",
-  authDomain: "codeclapper-d8a72.firebaseapp.com",
-  projectId: "codeclapper-d8a72",
-  storageBucket: "codeclapper-d8a72.appspot.com",
-  messagingSenderId: "992550955729",
-  appId: "1:992550955729:web:268c66ceb8160fde26b3f0"
+  apiKey: "AIzaSyC8VQ3S6g_wcCbOyP5xEbK2ARvqkN-0oi8",
+  authDomain: "codeclapper-994f2.firebaseapp.com",
+  databaseURL: "https://codeclapper-994f2-default-rtdb.firebaseio.com",
+  projectId: "codeclapper-994f2",
+  storageBucket: "codeclapper-994f2.appspot.com",
+  messagingSenderId: "226109092427",
+  appId: "1:226109092427:web:1cc37f309de70aa8c1d3ce"
 };
 
 // Initialize Firebase

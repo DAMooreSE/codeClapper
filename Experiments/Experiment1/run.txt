@@ -1,4 +1,0 @@
-this is a simple program that records a screen capture in a web browser and offers the use the ability to download it.
-
-TODO: The node_module folder is missing due to file restrictions on git.
-run: npm i -D live-server or unzip the zip file containing the node_module folder.
