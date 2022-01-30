@@ -2,12 +2,8 @@ Make sure you have the following softwares installed before proceeding:
 *Visual Studio Code 'https://code.visualstudio.com/download'
 *NodeJS and npm package manager 'https://nodejs.org/en/download/'
 
-0.ENSURE YOU'RE USING A FRESH COPY OF THE CODE EVERY TIME YOU DEPLOY FROM SCRATCH!
-0.1.It's much easier to download and copy a fresh copy of the project code from github every new attempt to deploy.
-0.2.If theres any node_modules folders, any package-lock.json files, a ".creds.json" file under recorder, or a build folder under clapper, delete any and all of these.
 
 //Installing Dependencies
-0.1.Use git to Pull any changes made to the master branch.
 1.Download and Open the project folder '/copy-of-master/' in Visual Studio Code
 
 
@@ -27,14 +23,14 @@ Make sure you have the following softwares installed before proceeding:
 
 
 //Now register your user
-6.Leave the other terminal open and running and open a new one in Visual Studio with Terminal > New Terminal 
+5.Leave the other terminal open and running and open a new one in Visual Studio with Terminal > New Terminal 
 7.Run 'cd recorder'
-8.Run 'node index.js signup --email YOUREMAIL --password YOURPASSWORD'
-9.Run "cd .." 
-10.Run 'npm run build-recorder' which should start the recording service
+6.Run 'node index.js signup --email YOUREMAIL --password YOURPASSWORD'
+7.Run "cd .." 
+8.Run 'npm run build-recorder' which should start the recording service
 
 //Using CodeClapper
-11. Open 'localhost:3006' in a new PRIVATE window in a browser and try to login with your new login.
+9. Open 'localhost:3006' in a new PRIVATE window in a browser and try to login with your new login.
 //Some browsers will cache the old login so a private window ensure this doesn't happen
 
 	
