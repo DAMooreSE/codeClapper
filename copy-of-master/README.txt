@@ -7,11 +7,11 @@ Make sure you have the following softwares installed before proceeding:
 0.2.If theres any node_modules folders, any package-lock.json files, a ".creds.json" file under recorder, or a build folder under clapper, delete any and all of these.
 
 //Installing Dependencies
-0.1.If Using git, Pull any changes made to the master branch.
-1.Download and Open the project folder '/copy-of-master/' in Visual Studio Code
+1.If Using git, Pull any changes made to the master branch.
+1.1.Download and Open the project folder '/copy-of-master/' in Visual Studio Code
 
-2.1.//Reconfiguring Firebase
-2.2.Go to https://firebase.google.com/
+2.//Reconfiguring Firebase
+2.2.Open a web browser and go to https://firebase.google.com/
 2.3.Select "Create a project"
 2.4.Name your project whatever you want, I use "codeClapper", and accept the terms and continue
 2.5.Make sure Google Analytics is NOT enabled for the project and then select "create project"
@@ -45,10 +45,9 @@ Make sure you have the following softwares installed before proceeding:
 //Now we install the necessary packages to run the application:
 3.Open Visual Studio Code again and ensure your terminal is open at the main project folder /copy-of-master
 //if it's not, you can simply close the terminal and open a new one using Terminal > New Terminal on the menu bar.
-3.If not previously installed, Run 'sudo npm install -g yarn' (only done if yarn hasn't been installed on your machine before)
-4.Run 'npm run install' and wait for the dependencies to install
+4.If not previously installed, Run 'sudo npm install -g yarn' (only done if yarn hasn't been installed on your machine before)
+5.Run 'npm run install' and wait for the dependencies to install
 6.Run 'npm run build-clapper' which should start and run the UI service
-//This should open a browser to the local webpage 'localhost:3006' where the application is deployed to
 //This page can be accessed by devices on the same network by opening 'your_ip_address:3006' in a browser
 
 //OPTIONAL FIX IF STEP 6 DOESN'T WORK:
@@ -57,23 +56,18 @@ Make sure you have the following softwares installed before proceeding:
 6.3.Run 'yarn install --frozen-lockfile'
 6.4.Run 'yarn start'
 
-
 //Now register your user
 7.Leave the other terminal open and running and open a new one in Visual Studio with Terminal > New Terminal 
 8.Run 'cd recorder'
 9.If you haven't created a profile yet, Run 'node index.js signup --email YOUREMAIL --password YOURPASSWORD' (THIS WILL SAVE TO AN ONLINE DATABASE NOW, ONLY DONE ONCE!)
 9.1.If you already have a profile created but get the "You need to be logged in first" error, then sign in with this command instead:
 	'node index.js login --email YOUREMAIL --password YOURPASSWORD'
+//You'll probably need to press control + c to quit the function after successfully logging in or creating an account
 10.Run "npm run start" which should start the recording service
 
 //Using CodeClapper
 11. Open 'localhost:3006' in a new PRIVATE window in a browser and try to login with your new login.
 //Some browsers will cache the old login so a private window ensure this doesn't happen
-
-	
-//Potential packages that might need to be installed manually (if you get an error saying something like 'firebase is not defined'
-//or some other package, go to the home directory of the project and enter 'npm install -g PACKAGE'
-//(possible packages: 'firebase','firebase-tools','yarn','react','react-app-rewind','react-scripts')
 
 
 //Before I could install additional npm packages I had to take ownership of its files, if you get an error when running this, use this command if similar problem is ran into:
