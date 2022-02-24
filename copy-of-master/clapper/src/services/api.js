@@ -5,17 +5,19 @@ import _ from "lodash";
 import store from "../stores/AppStore";
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyBoSQoPY5lSN6lp8-bj4mLVIVcxT_wvI4k",
-  authDomain: "codeclapper-d8a72.firebaseapp.com",
-  databaseURL: "https://codeclapper-d8a72-default-rtdb.firebaseio.com",
-  projectId: "codeclapper-d8a72",
-  storageBucket: "codeclapper-d8a72.appspot.com",
-  messagingSenderId: "992550955729",
-  appId: "1:992550955729:web:268c66ceb8160fde26b3f0"
+var firebaseConfig = {
+  apiKey: "AIzaSyDY72P5MTZ3MrFUfJMQu3qQQhKoDSvQykA",
+  authDomain: "codeclapper-15c0b.firebaseapp.com",
+  databaseURL: "https://codeclapper-15c0b-default-rtdb.firebaseio.com/",
+  projectId: "codeclapper-15c0b",
+  storageBucket: "codeclapper-15c0b.appspot.com",
+  messagingSenderId: "593433560251",
+  appId: "1:593433560251:web:8285e293f5ff3cd722559e",
+  measurementId: "G-SY7HHR7C1M"
 };
+
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
 
