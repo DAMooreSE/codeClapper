@@ -35,7 +35,7 @@ Make sure you have the following softwares installed before proceeding:
 2.22.Staying in "realtime database", select the "rules" tab and then change "false" to "true" on lines 3 and 4 before selecting "publish"
 //You might get a warning about open database access, just ignore it and continue
 2.23.Staying in "realtime database", select the "Data" tab and copy the url of the database
-2.24.Open /recorder/index.js and /clapper/src/services/api.js again and add the line: 
+2.24.Open /recorder/index.js and /clapper/src/services/api.js again and add the line:
 	'databaseURL: "YOURDATABASEURLHERE",' underneath the "authDomain" lines (lines 20 and 11 respectively)
 2.25.Change the lines "const firebaseConfig = {" to "var firebaseConfig = {" in the same files.
 2.26.Change the lines "const app = firebase.initializeApp(firebaseConfig);" to "firebase.initalizeApp(firebaseConfig);" in the same files.

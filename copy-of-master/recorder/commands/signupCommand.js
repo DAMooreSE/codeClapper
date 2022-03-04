@@ -18,6 +18,7 @@ module.exports = async function signupCommand(argv) {
       })
 
     storeUserCredential(argv.email, argv.password)
+	process.exit(0)
   } catch (error) {
     // Handle Errors here.
     var errorCode = error.code
