@@ -7,6 +7,8 @@ const ffmpeg = require("ffmpeg-static")
 const { OUTPUT_PATH, EXPORT_PATH } = require("./constants")
 const executeShellCmd = require("./executeShellCmd")
 
+//let count = 0;
+
 function sortClipsForExport(clips) {
   return _(clips)
     .filter((c) => c.completed)
@@ -126,7 +128,9 @@ async function exportClip(sessionStartDate, videoFilePath, exportPath, numberPre
     videoArgs.push("-map", "0:a:0")
   }
 
+  //count++
   const videoClipExportPath = `${exportPath}/${numberPrefix + 1}-${clip.id}.mp4`
+  //const videoClipExportPath = `${exportPath}/${numberPrefix + 1}-${clip.id}-${count}.mp4`
   videoArgs.push(videoClipExportPath)
 
   const videoCmd = `${ffmpeg} ${videoArgs.join(" ")}`

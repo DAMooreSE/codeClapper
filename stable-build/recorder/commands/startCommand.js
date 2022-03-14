@@ -63,10 +63,14 @@ module.exports = async function startCommand() {
 
             console.log("going to start recording with ", action.request)
 
+            //This is where the recording service is started, using the options included in the method
             await recorder.startRecording({
+              //fps: 30,
               audioDeviceId: action.request.micId,
               screenId: parseInt(action.request.screenId, 10),
               codec: "H.264",
+              //H.264 is default, other options are: "hevc" | "h264" | "proRes422" | "proRes4444"
+              //proRes formats are uncompresed and will result in large files
             })
 
             // const stats = fs.statSync(filePath)

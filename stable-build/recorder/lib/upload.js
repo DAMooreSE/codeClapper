@@ -7,6 +7,7 @@ const updateSessionExportPath = require("../api/updateSessionExportPath")
 
 function zipDirectory(source, out) {
   const archive = archiver("zip", { zlib: { level: 9 } })
+  //const archive = archiver("zip", { zlib: { level: 3 } })
   const stream = fs.createWriteStream(out)
 
   return new Promise((resolve, reject) => {

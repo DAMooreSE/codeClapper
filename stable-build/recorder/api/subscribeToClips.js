@@ -50,6 +50,7 @@ module.exports = function subscribeToClips(uid, sessionId, recordingPath, startT
 
           await executeShellCmd(
             `${ffmpeg} -i ${tempPath} -vcodec copy -acodec copy -movflags faststart ${tempPathWithAtom}`
+            //"-vcodec copy -acodec copy" sets the codec to "copy", a special value that's output only to indicate the steam is not to be re-encoded
           )
 
           newClips.forEach((c) => exportedClips.push(c.id))
