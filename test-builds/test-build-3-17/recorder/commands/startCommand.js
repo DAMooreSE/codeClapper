@@ -28,16 +28,7 @@ module.exports = async function startCommand() {
 
   const screens = await aperture.screens()
   const mics = await aperture.audioDevices()
-  if (screens[0].id.length > 200 || screens[0].name.length > 200) {
-	  console.log("screen[0] has an id or name with a length > 200")
-  }
-  else if (mics[0].id.length > 200 || mics[0].name.length > 200) {
-	  console.log("mic[0] has an id or name with a length > 200")
-	  console.log({ screens })
-  }
-  else {
-	console.log({ screens, mics })
-  }
+  console.log({ screens, mics })
 
   const db = firebase.firestore()
   const userRef = db.collection("users").doc(uid)
@@ -73,9 +64,10 @@ module.exports = async function startCommand() {
             console.log("going to start recording with ", action.request)
 
             await recorder.startRecording({
+			  fps: 30,
               audioDeviceId: action.request.micId,
               screenId: parseInt(action.request.screenId, 10),
-              codec: "H.264",
+              codec: "hevc",
             })
 
             // const stats = fs.statSync(filePath)
