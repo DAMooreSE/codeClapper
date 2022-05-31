@@ -67,7 +67,6 @@ module.exports = async function startCommand() {
 			        fps: 30,
               audioDeviceId: action.request.micId,
               screenId: parseInt(action.request.screenId, 10),
-              codec: "hevc",
             })
 
             // const stats = fs.statSync(filePath)
