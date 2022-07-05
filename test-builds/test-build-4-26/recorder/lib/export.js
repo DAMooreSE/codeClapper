@@ -83,13 +83,15 @@ async function exportClip(sessionStartDate, videoFilePath, exportPath, numberPre
     })
 
     //MUST CHANGE THE FILE TYPE IF YOU EDIT THE AUDIO ENCODER
-    audioFileLocation = `${exportPath}/${numberPrefix + 1}.ac3`
+    audioFileLocation = `${exportPath}/${numberPrefix + 1}.aac`
     //audioFileLocation = `${exportPath}/${numberPrefix + 1}.aac`
 
     audioArgs.push(
       "-filter_complex",
       `"${filterStreams} concat=n=${sortedAudioClips.length}:v=0:a=1[outa]"`,
       '-map "[outa]" -ac 1 ',
+      '-c:a aac -b:a 160k -cutoff 15000',
+      //'-c:a libfaac -q:a 330 -cutoff 15000',
       audioFileLocation
     )
 
@@ -125,7 +127,7 @@ async function exportClip(sessionStartDate, videoFilePath, exportPath, numberPre
   //-c:a ac3 = codec:audio is ac3
   //can subsitute ac3 with copy or other audio encoders such as 'aac', 'mp3', 'flac', etc
   //WARNING: 'flac' audio files can't be used in mp4s, which is the current file type
-  videoArgs.push("-c:v copy", "-c:a ac3")
+  videoArgs.push("-c:v copy", "-c:a aac")
   videoArgs.push("-map", "0:v:0")
   if (audioFileLocation) {
     videoArgs.push("-map", "1:a:0")
