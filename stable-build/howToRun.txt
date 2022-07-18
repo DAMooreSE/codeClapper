@@ -2,7 +2,7 @@ This is instructions for how to run the codeClapper software AFTER THIS BUILD HA
 
 1.Open the project folder "/stable-build/" in Visual Studio Code
 2.Open a new terminal.
-3.Run 'npm run build-clapper'
+3.Run 'npm run start-clapper'
 4.Open another terminal
 5.Run 'cd recorder'
 6.Run 'npm run start'
