@@ -104,7 +104,7 @@ export class AppStore {
 
   @action
   setSpinner(spinning) {
-    console.log("hendrik: setting spinner to ", spinning);
+    console.log("Log: setting spinner to ", spinning);
     this.spinner = spinning;
   }
 

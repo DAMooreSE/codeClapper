@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build-clapper": "cd clapper && yarn build",
+    "install-clapper": "cd clapper && yarn install --frozen-lockfile"
+  },
+  "dependencies": {
+    "get-video-duration": "^3.0.2"
+  }
+}

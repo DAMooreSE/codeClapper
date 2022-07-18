@@ -18,6 +18,7 @@ module.exports = async function signupCommand(argv) {
       })
 
     storeUserCredential(argv.email, argv.password)
+	console.log("Account successfully created and logged in!")
 	process.exit(0)
   } catch (error) {
     // Handle Errors here.

@@ -84,7 +84,7 @@ class SessionDetail extends Component {
       return null;
     }
 
-    console.log("hendrik: selected session ", toJS(selectedSession));
+    console.log("Log: selected session ", toJS(selectedSession));
 
     let listing;
 
@@ -99,7 +99,7 @@ class SessionDetail extends Component {
         .entries()
         .orderBy(([, v]) => v.startDate)
         .map(([clipId, c], i) => {
-          console.log('hendrik: mapping ', {
+          console.log('Log: mapping ', {
             clipId,
             c,
             i

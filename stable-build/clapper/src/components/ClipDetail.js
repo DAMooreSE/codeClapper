@@ -53,7 +53,7 @@ const ClipDetail = observer((props) => {
       return;
     }
 
-    console.log("hendrik: ClipDetail is selecting the clip ", {
+    console.log("Log: ClipDetail is selecting the clip ", {
       sessionId,
       clipId,
     });

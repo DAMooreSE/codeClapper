@@ -7,8 +7,6 @@ const ffmpeg = require("ffmpeg-static")
 const { OUTPUT_PATH, EXPORT_PATH } = require("./constants")
 const executeShellCmd = require("./executeShellCmd")
 
-//let count = 0;
-
 function sortClipsForExport(clips) {
   return _(clips)
     .filter((c) => c.completed)
@@ -84,12 +82,16 @@ async function exportClip(sessionStartDate, videoFilePath, exportPath, numberPre
       filterStreams += `[${j}:a]`
     })
 
+    //MUST CHANGE THE FILE TYPE IF YOU EDIT THE AUDIO ENCODER
     audioFileLocation = `${exportPath}/${numberPrefix + 1}.aac`
+    //audioFileLocation = `${exportPath}/${numberPrefix + 1}.aac`
 
     audioArgs.push(
       "-filter_complex",
       `"${filterStreams} concat=n=${sortedAudioClips.length}:v=0:a=1[outa]"`,
       '-map "[outa]" -ac 1 ',
+      '-c:a aac -b:a 160k -cutoff 15000',
+      //'-c:a libfaac -q:a 330 -cutoff 15000',
       audioFileLocation
     )
 
@@ -120,6 +122,11 @@ async function exportClip(sessionStartDate, videoFilePath, exportPath, numberPre
     videoArgs.push("-i", audioFileLocation)
   }
 
+  //-c:v copy = codec:video copy default (h264)
+  //can subsitute copy with other video encoders such as 'hevc', 'proRes422', 'avi', etc
+  //-c:a ac3 = codec:audio is ac3
+  //can subsitute ac3 with copy or other audio encoders such as 'aac', 'mp3', 'flac', etc
+  //WARNING: 'flac' audio files can't be used in mp4s, which is the current file type
   videoArgs.push("-c:v copy", "-c:a aac")
   videoArgs.push("-map", "0:v:0")
   if (audioFileLocation) {
@@ -128,9 +135,7 @@ async function exportClip(sessionStartDate, videoFilePath, exportPath, numberPre
     videoArgs.push("-map", "0:a:0")
   }
 
-  //count++
   const videoClipExportPath = `${exportPath}/${numberPrefix + 1}-${clip.id}.mp4`
-  //const videoClipExportPath = `${exportPath}/${numberPrefix + 1}-${clip.id}-${count}.mp4`
   videoArgs.push(videoClipExportPath)
 
   const videoCmd = `${ffmpeg} ${videoArgs.join(" ")}`

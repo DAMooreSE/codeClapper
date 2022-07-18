@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build-clapper": "cd clapper && npm run launch",
+    "build-recorder": "cd recorder && yarn start",
+    "install-clapper": "cd clapper && yarn install --frozen-lockfile",
+    "install-recorder": "cd recorder && yarn install",
+    "install": "npm run install-clapper && npm run install-recorder"
+  },
+  "dependencies": {
+    "get-video-duration": "^3.0.2"
+  }
+}
