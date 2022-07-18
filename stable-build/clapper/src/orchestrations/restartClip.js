@@ -14,7 +14,6 @@ export default async function restartClip(history) {
     return;
   }
 
-  // do this in api
   store.setSpinner(true);
   try {
     await putClipStartDate(selectedSession.id, selectedClip.id);

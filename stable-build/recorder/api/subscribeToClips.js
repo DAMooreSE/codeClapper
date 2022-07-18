@@ -10,7 +10,6 @@ let previousUnsubscribe
 let exportedClips = []
 
 module.exports = function subscribeToClips(uid, sessionId, recordingPath, startTime) {
-  // previousUnsubscribe =
 
   const exportPath = path.join(EXPORT_PATH, sessionId)
 
@@ -50,7 +49,6 @@ module.exports = function subscribeToClips(uid, sessionId, recordingPath, startT
 
           await executeShellCmd(
             `${ffmpeg} -i ${tempPath} -vcodec copy -acodec copy -movflags faststart ${tempPathWithAtom}`
-            //`${ffmpeg} -i ${tempPath} -vcodec hevc -acodec flac -movflags faststart ${tempPathWithAtom}`
           )
 
           newClips.forEach((c) => exportedClips.push(c.id))

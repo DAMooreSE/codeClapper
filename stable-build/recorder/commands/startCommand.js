@@ -5,13 +5,11 @@ const notifier = require("node-notifier")
 const { recordingStates, exportStates } = require("../api/constants")
 const updateRecordingState = require("../api/updateRecordingState")
 const { createSession, endSession } = require("../api")
-// const subscribeToClips = require("../api/subscribeToClips")
 const fs = require("fs")
 const { exportSession, openExportPath } = require("../lib/export")
 const updateExportState = require("../api/updateExportState")
 const markAllActiveSessionsAsAborted = require("../api/markAllActiveSessionsAsAborted")
 const { OUTPUT_PATH,EXPORT_PATH } = require("../lib/constants");
-const { uploadSession } = require("../lib/upload")
 
 module.exports = async function startCommand() {
   if (!fs.existsSync(OUTPUT_PATH)) {
@@ -69,9 +67,6 @@ module.exports = async function startCommand() {
               screenId: parseInt(action.request.screenId, 10),
             })
 
-            // const stats = fs.statSync(filePath)
-            // console.log("This is what we have for the recording that started ", filePath)
-
             activeSessionId = await createSession(uid)
             updateRecordingState(uid, recordingStates.ACTIVE)
 
@@ -80,8 +75,6 @@ module.exports = async function startCommand() {
             }
 
             notifier.notify({ title: "Started recording!", message: "Started recording!" })
-
-            // subscribeToClips(uid, activeSessionId, filePath, stats.ctime)
           }
 
           if (action.type === "stop-recording") {
@@ -114,18 +107,10 @@ module.exports = async function startCommand() {
 
             try {
               const sessionData = (await userRef.collection("sessions").doc(sessionId).get()).data()
-
               console.log("got a request to export sessionId ", sessionId)
-              // const outputLocation = `./output/${session.id}.mp4`
-
               const exportPath = await exportSession({ ...sessionData, id: sessionId })
               updateExportState(uid, sessionId, exportStates.SUCCESS)
               openExportPath(exportPath)
-              // updateExportState(uid, sessionId, exportStates.UPLOADING)
-
-              // await uploadSession(uid, sessionId, exportPath)
-
-
             } catch (err) {
               console.error("GOT an error while exporting : ", err)
               updateExportState(uid, sessionId, exportStates.ERRORED)

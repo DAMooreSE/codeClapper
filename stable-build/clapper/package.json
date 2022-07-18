@@ -26,7 +26,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
-    "launch": "yarn build && yarn start"
+    "launch": "yarn start && yarn build"
   },
   "eslintConfig": {
     "extends": "react-app"

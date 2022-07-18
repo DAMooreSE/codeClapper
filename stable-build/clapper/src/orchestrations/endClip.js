@@ -9,7 +9,6 @@ export default async function endClip(history) {
     return;
   }
 
-  // do this in api
   store.setSpinner(true);
   try {
     putClipEndDate(selectedSession.id, selectedClip.id);

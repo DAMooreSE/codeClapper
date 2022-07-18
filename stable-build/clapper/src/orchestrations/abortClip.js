@@ -9,7 +9,6 @@ export default async function abortClip(history) {
     return;
   }
 
-  // do this in api
   store.setSpinner(true);
   try {
     putClipAbort(selectedSession.id, selectedClip.id);

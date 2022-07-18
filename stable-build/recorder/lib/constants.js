@@ -1,6 +1,5 @@
 var appRoot = require("app-root-path")
 const newLocal = "/.creds.json"
-//var appRoot = path.dirname(process.execPath)
 
 module.exports.CREDS_PATH = appRoot + newLocal
 module.exports.EXPORT_PATH = appRoot + "/exports"

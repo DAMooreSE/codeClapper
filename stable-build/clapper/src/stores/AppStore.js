@@ -55,13 +55,8 @@ export class AppStore {
 
   @computed get selectedClip() {
     if (!this.selectedSession || !this.selectedSession.clips) {
-      // console.log(
-      //   "buksie: selectedClip(): going to return because no selectedSession with clips"
-      // );
       return undefined;
     }
-
-    // console.log("buksie: going to return the selected clip!");
 
     return this.selectedSession.clips[this.selectedClipId];
   }
@@ -104,7 +99,7 @@ export class AppStore {
 
   @action
   setSpinner(spinning) {
-    console.log("Log: setting spinner to ", spinning);
+    console.log("setting spinner to ", spinning);
     this.spinner = spinning;
   }
 
@@ -156,7 +151,7 @@ export class AppStore {
 
   @action
   selectSession(sessionId) {
-    console.log("buksie: setting the selected session ", sessionId);
+    console.log("setting the selected session ", sessionId);
     this.selectedSessionId = sessionId;
   }
 
@@ -173,7 +168,7 @@ export class AppStore {
 
   @action
   selectAudioClip(sessionId, clipId, audioClipId) {
-    console.log("buksie: selectAudioClip... ");
+    console.log("selectAudioClip... ");
     this.selectClip(sessionId, clipId);
     this.selectedAudioClipId = audioClipId;
   }
@@ -181,13 +176,12 @@ export class AppStore {
   @action
   updateSession(session) {
     if (this.activeSession && this.activeSession.id === session.id) {
-      console.log("buksie: active session being updated! ", session);
+      console.log("active session being updated! ", session);
     } else {
-      // console.log("buksie: non active session being updated ", session.id);
+      //console.log("non active session being updated ", session.id);
     }
 
     const storedSession = _.find(this.rawSessions, (s) => s.id === session.id);
-    // const indexOfStoredSession = (storedSession)
 
     if (storedSession) {
       const index = _.indexOf(this.rawSessions, storedSession);

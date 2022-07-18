@@ -37,8 +37,15 @@ async function main() {
     const videoArgs = ["-y"]
 
     videoArgs.push(
+      //-ss
+      //When used as an input option (before -i), seeks in this input file to position.
+      //When used as an output option (before an output url), decodes but discards input until the timestamps reach position.
       "-ss",
       `00:00:${pad(i * EXPORT_CLIP_DURATION, 2, "0")}.1`, //start
+      //00:00:XX.1 = clip duration < 
+      //-t
+      //When used as an input option (before -i), limit the duration of data read from the input file.
+      //When used as an output option (before an output url), stop writing the output after its duration reaches duration.
       "-t",
       `00:00:0${EXPORT_CLIP_DURATION - EXPORT_CLIP_PADDING}`, //end
       "-i",
@@ -47,7 +54,6 @@ async function main() {
     )
 
     videoArgs.push()
-    // videoArgs.push("-map", "0:v:0")
 
     const videoCmd = `${ffmpeg} ${videoArgs.join(" ")}`
 

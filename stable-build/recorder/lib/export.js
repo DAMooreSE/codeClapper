@@ -21,7 +21,6 @@ function getDuration(start, end) {
 
   const durationFromStart = moment.duration(timeMoment.diff(startMoment))
   return (
-    // tslint:disable-next-line:prefer-template
     pad(durationFromStart.get("hours"), 2, "0") +
     ":" +
     pad(durationFromStart.get("minutes"), 2, "0") +
@@ -45,9 +44,6 @@ function prepClipForExport(sessionStartDate, c) {
 }
 
 async function exportClip(sessionStartDate, videoFilePath, exportPath, numberPrefix, clip) {
-  // appStore().setExportProgress({
-  //   currentClip: i + 1,
-  // })
 
   if (!fs.existsSync(EXPORT_PATH)) {
     fs.mkdirSync(EXPORT_PATH)
@@ -84,14 +80,12 @@ async function exportClip(sessionStartDate, videoFilePath, exportPath, numberPre
 
     //MUST CHANGE THE FILE TYPE IF YOU EDIT THE AUDIO ENCODER
     audioFileLocation = `${exportPath}/${numberPrefix + 1}.aac`
-    //audioFileLocation = `${exportPath}/${numberPrefix + 1}.aac`
 
     audioArgs.push(
       "-filter_complex",
       `"${filterStreams} concat=n=${sortedAudioClips.length}:v=0:a=1[outa]"`,
       '-map "[outa]" -ac 1 ',
       '-c:a aac -b:a 160k -cutoff 15000',
-      //'-c:a libfaac -q:a 330 -cutoff 15000',
       audioFileLocation
     )
 

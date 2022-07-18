@@ -18,7 +18,6 @@ export default async function addAudioToClip(history) {
     completed: false,
   };
 
-  // do this in api
   store.setSpinner(true);
   try {
     postAudioClipToActiveClip(selectedSession.id, selectedClip.id, audioClip);

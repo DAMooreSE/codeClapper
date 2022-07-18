@@ -15,7 +15,6 @@ module.exports = async function loginCommand(argv) {
     // Handle Errors here.
     var errorCode = error.code
     var errorMessage = error.message
-    // ...
 
     console.error(errorCode, errorMessage)
   }

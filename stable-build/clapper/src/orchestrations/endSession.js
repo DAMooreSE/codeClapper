@@ -9,7 +9,6 @@ export default async function endSession(history) {
     return;
   }
 
-  // do this in api
   store.setSpinner(true);
   try {
     putSessionEndDate(selectedSession.id);

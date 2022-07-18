@@ -5,35 +5,6 @@ import store from "../stores/AppStore";
 import selectSession from "../orchestrations/selectSession";
 import startExporting from "../orchestrations/requests/startExporting";
 import { exportStates } from "../stores/constants";
-// import getDurationStr from "../utils/getDurationStr";
-// import cameraIconSrc from "./images/video-camera-64@2x.png";
-// import audioIconSrc from "./images/speaker-64@2x.png";
-// import addAudioToClip from "../orchestrations/addAudioToClip";
-// import endClip from "../orchestrations/endClip";
-// import abortClip from "../orchestrations/abortClip";
-
-// import FabButton from "./FabButton";
-// import clapperSrc from "./images/clapper.png";
-// import addSrc from "./images/add.png";
-// import stopSrc from "./images/stop.png";
-// import cancelSrc from "./images/cancel.png";
-// import { toJS } from "mobx";
-
-// const Icon = styled.div`
-//   background-size: 32px 28px;
-//   background-repeat: no-repeat;
-//   display: block;
-//   width: 32px;
-//   height: 28px;
-// `;
-
-// const CameraIcon = styled(Icon)`
-//   background-image: url(${cameraIconSrc});
-// `;
-
-// const AudioIcon = styled(Icon)`
-//   background-image: url(${audioIconSrc});
-// `;
 
 const Exporting = observer((props) => {
   const { selectedSession } = store;
@@ -50,7 +21,7 @@ const Exporting = observer((props) => {
   function startExport() {
     setStartedExport(true);
     console.log(
-      "frikkie: starting export because ",
+      "starting export because ",
       selectedSession.exportStatus
     );
     startExporting();
@@ -71,7 +42,7 @@ const Exporting = observer((props) => {
     }
 
     console.log(
-      "frikkie: in useEffect handling the selectedSession change ",
+      "in useEffect handling the selectedSession change ",
       toJS(selectedSession)
     );
 

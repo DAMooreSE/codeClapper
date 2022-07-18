@@ -9,20 +9,16 @@ import Spinner from "./Spinner";
 import FabButton from "./FabButton";
 import addSrc from "./images/add.png";
 
-// import syncUserState from "../orchestrations/syncUserState";
-
 const Home = observer((props) => {
   const {
     activeSession,
     completedSessions,
     abortedSessions,
     initializedData,
-    // initializedProfile,
     profile,
   } = store;
 
   useEffect(() => {
-    // syncUserState();
     if (profile) {
       loadSessions();
     }

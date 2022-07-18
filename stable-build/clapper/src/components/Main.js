@@ -15,20 +15,6 @@ import { observer } from "mobx-react";
 import checkAuthState from "../orchestrations/checkAuthState";
 import Spinner from "./Spinner";
 
-// const renderMergedProps = (component, ...rest) => {
-//   const finalProps = Object.assign({}, ...rest);
-//   return (
-//     React.createElement(component, finalProps)
-//   );
-// };
-
-// const PropsRoute = ({ component, ...rest }) => (
-//   <Route
-//     {...rest}
-//     render={routeProps => renderMergedProps(component, routeProps, rest)}
-//   />
-// );
-
 function handleAnywhereClick() {
   // store.setFabOpenState(false)
 }

@@ -19,7 +19,6 @@ export default async function restartAudioClip(history) {
     return;
   }
 
-  // do this in api
   store.setSpinner(true);
   try {
     await putAudioClipStartDate(

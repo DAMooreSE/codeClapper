@@ -4,9 +4,9 @@ import store from "../stores/AppStore";
 let subscribed = false;
 
 export default async function loadSessions() {
-  console.log("Log: loading Sessions!");
+  console.log("loading Sessions!");
   if (subscribed) {
-    console.log("Log: already subscribed, not going to call it again");
+    console.log("already subscribed, not going to call it again");
     return;
   }
 

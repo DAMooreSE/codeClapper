@@ -35,7 +35,7 @@ const RecordingVideo = observer((props) => {
       return;
     }
 
-    console.log("Log: going to select the clip on the store ", {
+    console.log("going to select the clip on the store ", {
       sessionId,
       clipId,
     });
@@ -44,7 +44,7 @@ const RecordingVideo = observer((props) => {
 
   useEffect(() => {
     if (!selectedClip) {
-      console.log("Log: could not find selected clip");
+      console.log("could not find selected clip");
       return;
     }
 

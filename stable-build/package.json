@@ -4,7 +4,9 @@
     "build-recorder": "cd recorder && yarn start",
     "install-clapper": "cd clapper && yarn install --frozen-lockfile",
     "install-recorder": "cd recorder && yarn install",
-    "install": "npm run install-clapper && npm run install-recorder"
+    "install": "npm run install-clapper && npm run install-recorder",
+    "build-both": "npm run build-clapper && npm run build-recorder",
+    "init": "npm run install && npm run build-both"
   },
   "dependencies": {
     "get-video-duration": "^3.0.2"

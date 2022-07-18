@@ -20,7 +20,6 @@ export default async function endAudioClip(history, addNew) {
     return;
   }
 
-  // do this in api
   store.setSpinner(true);
   try {
     putAudioClipEndDate(

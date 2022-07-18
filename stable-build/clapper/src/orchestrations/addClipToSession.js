@@ -18,7 +18,6 @@ export default async function addClipToSession(history) {
     completed: false,
   };
 
-  // do this in api
   store.setSpinner(true);
   try {
     postClipToSession(selectedSession.id, clip);

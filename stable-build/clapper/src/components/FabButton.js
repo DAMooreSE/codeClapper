@@ -22,7 +22,6 @@ function clickHelper(clickHandler) {
     evt.persist();
     const target = evt.currentTarget;
     console.log("click handler - ", evt);
-    // target.classList.add("mousedown");
     setTimeout(() => {
       target.classList.remove("mousedown");
       clickHandler(evt);
@@ -63,7 +62,6 @@ const SecondaryFab = ({ config }) => (
 
 @observer
 class FabButton extends Component {
-  // private m: React.RefObject<HTMLInputElement>;
 
   state = {
     open: true,

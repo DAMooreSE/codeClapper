@@ -8,21 +8,16 @@ import FabButton from "./FabButton";
 import addClipToSession from "../orchestrations/addClipToSession";
 import stopRecording from "../orchestrations/requests/stopRecording";
 import restartSrc from "./images/restart.png";
-// import endSession from '../orchestrations/endSession';
 import clapperSrc from "./images/clapper.png";
 import addSrc from "./images/add.png";
 import stopSrc from "./images/stop.png";
-// import saveSrc from "./images/icons8-save-96.png";
 import downloadSrc from "./images/download.png";
 import CardLink from "./CardLink";
 import firebase from "firebase/app";
 import { exportStates } from "../stores/constants";
 import { getSessionDownloadUrl } from "../services/api";
 
-// import cancelSrc from './images/cancel.png';
-// import type { Session } from '../stores/AppStore';
 
-// $FlowFixMe
 @observer
 class SessionDetail extends Component {
   async componentWillMount() {
@@ -57,12 +52,6 @@ class SessionDetail extends Component {
     history.push(`/sessions/${sessionId}/exporting`);
   }
 
-  // handleExportClick = () => {
-  //   const { history } = this.props;
-  //   const { selectedSession } = store;
-  //   history.push(`/sessions/${selectedSession.id}/exporting`);
-  // };
-
   handleDownloadClick = async () => {
     const { selectedSession } = store;
     const downloadUrl = await getSessionDownloadUrl(selectedSession.url);
@@ -71,7 +60,6 @@ class SessionDetail extends Component {
   };
 
   handleEndClick = () => {
-    // endSession(history);
     console.log(
       "need to show warning here that guides you to stopping on the recording device"
     );
@@ -84,7 +72,7 @@ class SessionDetail extends Component {
       return null;
     }
 
-    console.log("Log: selected session ", toJS(selectedSession));
+    console.log("selected session ", toJS(selectedSession));
 
     let listing;
 
@@ -99,7 +87,7 @@ class SessionDetail extends Component {
         .entries()
         .orderBy(([, v]) => v.startDate)
         .map(([clipId, c], i) => {
-          console.log('Log: mapping ', {
+          console.log('mapping ', {
             clipId,
             c,
             i
