@@ -58,11 +58,13 @@ Make sure you have the following softwares installed before proceeding:
 
 
 //Now register your user
-10.Leave the other terminal open and running and open a new one in Visual Studio with Terminal > New Terminal 
-11.Run 'cd recorder'
-12.1.If you haven't created a profile yet, Run 'node index.js signup --email YOUREMAIL --password YOURPASSWORD' (THIS WILL SAVE TO AN ONLINE DATABASE NOW, ONLY DONE ONCE!)
-12.2.If you already have a profile created but get the "You need to be logged in first" error, then run 'node index.js login --email YOUREMAIL --password YOURPASSWORD' instead.
-13.Run "npm run start" which should start the recording service
+10.Leave the other terminal open and running and open a new one in Visual Studio with Terminal > New Terminal
+11.If you already have created your account, You can fill in your login info in
+	the "login" script inside the file /stable-build/package.json
+11.1.Once you save the changes, run "npm run start-rec" to login and launch the recorder
+12.If you haven't previously created an account, Run 'cd recorder'
+12.1.Run 'node index.js signup --email YOUREMAIL --password YOURPASSWORD' (THIS WILL SAVE TO AN ONLINE DATABASE NOW, ONLY DONE ONCE!)
+12.2.Run "npm run start" which should start the recording service
 
 
 

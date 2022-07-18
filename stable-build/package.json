@@ -4,7 +4,9 @@
     "start-recorder": "cd recorder && npm run start",
     "install-clapper": "cd clapper && yarn install --frozen-lockfile",
     "install-recorder": "cd recorder && yarn install",
-    "install": "npm run install-clapper && npm run install-recorder"
+    "install": "npm run install-clapper && npm run install-recorder",
+    "login": "cd recorder && node index.js login --email e@mail.com --password password",
+    "start-rec": "npm run login && npm run start-recorder"
   },
   "dependencies": {
     "get-video-duration": "^3.0.2"

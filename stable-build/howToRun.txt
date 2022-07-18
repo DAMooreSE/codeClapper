@@ -2,12 +2,14 @@ This is instructions for how to run the codeClapper software AFTER THIS BUILD HA
 
 1.Open the project folder "/stable-build/" in Visual Studio Code
 2.Open a new terminal.
-3.Run 'npm run start-clapper'
-4.Open another terminal
-5.Run 'cd recorder'
-6.Run 'npm run start'
-6.1.If you recieve a message stating "you must be logged in first!" then run the next command to login:
-6.2.Subsituting your email and password, run 'node index.js login --email YOUREMAIL --password YOURPASSWORD'
+3.Run 'npm run install'
+4.Run 'npm run start-clapper'
+5.Open another terminal
+6.Run 'npm run start-recorder'
+6.1.If you recieve a message stating "you must be logged in first!" then login using either method:
+6.2.If you haven't Subsituted your email and password in the login script in /package.json, 
+    run 'cd recorder' then run 'node index.js login --email YOUREMAIL --password YOURPASSWORD'
+6.3.If you did Subsitute your login, run 'npm run start-rec' instead.
 7.Open a new private tab in a web browser and navigate to 'localhost:3006' in your browser.
 8.Login using your email and password and then enjoy using codeClapper!
 9.Exported clip files can be found at /stable-build/recorder/output after stopping recording currently.
