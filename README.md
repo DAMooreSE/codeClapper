@@ -1,4 +1,4 @@
-# codeClapper
+# Code Clapper
 
 Welcome to Dakota Moore's private github repository for the commissioned Code Clapper project. 
 
