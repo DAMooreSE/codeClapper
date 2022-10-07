@@ -14,7 +14,7 @@ This project uses a variety of software and technology for development including
  * JavaScript, Aperture.JS, Google Firebase, NPM, and Yarn for the back-end
  * Development also utilized Git, Visual Studio Code, and more.
 
-The most up-to-date guide on building and deploying Code Clapper can be found in this Google Doc:
+The most up-to-date guide on building and deploying Code Clapper can be found in the "documentation-and-guides" directory, or at this Google Doc:
 * https://docs.google.com/document/d/1zYjedNIvo6fGgE6vTE-4D-ABHJBJ5b2KBDh4TWmwxIQ/edit?usp=sharing
 
 This is a private repository for the Code Clapper project commissioned by client Craig Stansbury and developed by Software Engineer Dakota Moore based on previous work done by Hendrik Swanpoel.
